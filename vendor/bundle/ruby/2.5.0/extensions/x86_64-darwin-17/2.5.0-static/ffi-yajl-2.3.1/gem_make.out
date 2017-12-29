@@ -1,0 +1,19 @@
+current directory: /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.5.0/gems/ffi-yajl-2.3.1/ext/ffi_yajl/ext/dlopen
+/Users/takeuchi/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20171230-29714-swhkrb.rb extconf.rb
+ -O3 -Wno-error=shorten-64-to-32  -pipe
+-L. -L/Users/takeuchi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib
+checking for dlfcn.h... yes
+checking for dlopen() in -ldl... yes
+creating Makefile
+
+current directory: /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.5.0/gems/ffi-yajl-2.3.1/ext/ffi_yajl/ext/dlopen
+make "DESTDIR=" clean
+
+current directory: /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.5.0/gems/ffi-yajl-2.3.1/ext/ffi_yajl/ext/dlopen
+make "DESTDIR="
+compiling dlopen.c
+linking shared-object ffi_yajl/ext/dlopen.bundle
+
+current directory: /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.5.0/gems/ffi-yajl-2.3.1/ext/ffi_yajl/ext/dlopen
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 dlopen.bundle ./.gem.20171230-29714-vbn910/ffi_yajl/ext
