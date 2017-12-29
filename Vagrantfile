@@ -5,14 +5,43 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
-Vagrant.configure("2") do |config|
+VAGRANTFILE_API_VERSION = "2"
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+  end
+
+  config.vm.define :develop do |develop|
+    develop.omnibus.chef_version = :latest
+    develop.vm.hostname = "develop"
+    develop.vm.box = "opscode-ubuntu-14.04"
+    develop.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box"
+    develop.vm.network :private_network, ip: "192.168.33.10"
+  end
+
+  config.vm.define :ci do |ci|
+    ci.omnibus.chef_version = :latest
+    ci.vm.hostname = "ci"
+    ci.vm.box = "opscode-ubuntu-14.04"
+    ci.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box"
+    ci.vm.network :private_network, ip: "192.168.33.100"
+  end
+
+  config.vm.define :deploy do |deploy|
+    deploy.omnibus.chef_version = :latest
+    deploy.vm.hostname = "deploy"
+    deploy.vm.box = "opscode-ubuntu-14.04"
+    deploy.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box"
+    deploy.vm.network :private_network, ip: "192.168.33.200"
+  end
+
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "opscode-ubuntu-14.04"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
