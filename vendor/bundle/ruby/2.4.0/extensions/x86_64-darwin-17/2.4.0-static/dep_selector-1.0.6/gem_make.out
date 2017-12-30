@@ -1,0 +1,86 @@
+current directory: /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep_selector-1.0.6/ext/dep_gecode
+/Users/takeuchi/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20171230-60669-dpzb4w.rb extconf.rb
+checking for -lgecodesupport... yes
+checking for -lgecodesupport... yes
+checking for -lgecodekernel... yes
+checking for -lgecodeint... yes
+checking for -lgecodeminimodel... yes
+checking for -lgecodesearch... yes
+creating Makefile
+
+current directory: /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep_selector-1.0.6/ext/dep_gecode
+make "DESTDIR=" clean
+
+current directory: /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep_selector-1.0.6/ext/dep_gecode
+make "DESTDIR="
+compiling define_dummy_init.cxx
+compiling dep_selector_to_gecode.cpp
+In file included from dep_selector_to_gecode.cpp:20:
+In file included from /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep-selector-libgecode-1.3.1/lib/dep-selector-libgecode/vendored-gecode/include/gecode/driver.hh:41:
+In file included from /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep-selector-libgecode-1.3.1/lib/dep-selector-libgecode/vendored-gecode/include/gecode/minimodel.hh:45:
+In file included from /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep-selector-libgecode-1.3.1/lib/dep-selector-libgecode/vendored-gecode/include/gecode/kernel.hh:160:
+/Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep-selector-libgecode-1.3.1/lib/dep-selector-libgecode/vendored-gecode/include/gecode/kernel/array.hpp:1077:5: warning: 'operator new' should not return a null pointer unless it is declared 'throw()' [-Wnew-returns-null]
+    return NULL;
+    ^
+/Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep-selector-libgecode-1.3.1/lib/dep-selector-libgecode/vendored-gecode/include/gecode/kernel/array.hpp:1558:5: warning: 'operator new' should not return a null pointer unless it is declared 'throw()' [-Wnew-returns-null]
+    return NULL;
+    ^
+In file included from dep_selector_to_gecode.cpp:26:
+./dep_selector_to_gecode.h:175:10: warning: class 'VersionProblemPool' was previously declared as a struct [-Wmismatched-tags]
+  friend class VersionProblemPool;
+         ^
+./dep_selector_to_gecode.h:50:8: note: previous use is here
+struct VersionProblemPool
+       ^
+./dep_selector_to_gecode.h:175:10: note: did you mean struct here?
+  friend class VersionProblemPool;
+         ^~~~~
+         struct
+dep_selector_to_gecode.cpp:107:7: warning: field 'finalized' will be initialized after field 'cur_package' [-Wreorder]
+      finalized(false), cur_package(0), package_versions(*this, packageCount),
+      ^
+dep_selector_to_gecode.cpp:112:7: warning: field 'is_suspicious' will be initialized after field 'at_latest' [-Wreorder]
+      is_suspicious(new int[packageCount]),
+      ^
+dep_selector_to_gecode.cpp:118:7: warning: field 'pool' will be initialized after field 'instance_id' [-Wreorder]
+      pool(0),
+      ^
+dep_selector_to_gecode.cpp:142:7: warning: field 'finalized' will be initialized after field 'cur_package' [-Wreorder]
+      finalized(s.finalized), cur_package(s.cur_package),
+      ^
+dep_selector_to_gecode.cpp:146:26: warning: field 'is_suspicious' will be initialized after field 'at_latest' [-Wreorder]
+      is_required(NULL), is_suspicious(NULL),
+                         ^
+dep_selector_to_gecode.cpp:151:7: warning: field 'pool' will be initialized after field 'instance_id' [-Wreorder]
+      pool(s.pool),
+      ^
+9 warnings generated.
+compiling dep_selector_to_gecode_interface.cpp
+In file included from dep_selector_to_gecode_interface.cpp:23:
+In file included from ./dep_selector_to_gecode.h:28:
+In file included from /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep-selector-libgecode-1.3.1/lib/dep-selector-libgecode/vendored-gecode/include/gecode/driver.hh:41:
+In file included from /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep-selector-libgecode-1.3.1/lib/dep-selector-libgecode/vendored-gecode/include/gecode/minimodel.hh:45:
+In file included from /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep-selector-libgecode-1.3.1/lib/dep-selector-libgecode/vendored-gecode/include/gecode/kernel.hh:160:
+/Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep-selector-libgecode-1.3.1/lib/dep-selector-libgecode/vendored-gecode/include/gecode/kernel/array.hpp:1077:5: warning: 'operator new' should not return a null pointer unless it is declared 'throw()' [-Wnew-returns-null]
+    return NULL;
+    ^
+/Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep-selector-libgecode-1.3.1/lib/dep-selector-libgecode/vendored-gecode/include/gecode/kernel/array.hpp:1558:5: warning: 'operator new' should not return a null pointer unless it is declared 'throw()' [-Wnew-returns-null]
+    return NULL;
+    ^
+In file included from dep_selector_to_gecode_interface.cpp:23:
+./dep_selector_to_gecode.h:175:10: warning: class 'VersionProblemPool' was previously declared as a struct [-Wmismatched-tags]
+  friend class VersionProblemPool;
+         ^
+./dep_selector_to_gecode.h:50:8: note: previous use is here
+struct VersionProblemPool
+       ^
+./dep_selector_to_gecode.h:175:10: note: did you mean struct here?
+  friend class VersionProblemPool;
+         ^~~~~
+         struct
+3 warnings generated.
+linking shared-object dep_gecode.bundle
+
+current directory: /Users/takeuchi/work/chef_study/study_1229_2/vendor/bundle/ruby/2.4.0/gems/dep_selector-1.0.6/ext/dep_gecode
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 dep_gecode.bundle ./.gem.20171230-60669-s9n8tg
